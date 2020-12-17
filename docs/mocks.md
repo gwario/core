@@ -108,14 +108,16 @@ Looking at the following response configuration
         "ok": {
             "default": true,
             "then": {
+                "criteria": {
+                    "times": 3 // optional
+                },
                 "mocks": [ { 
                     "name": "some-mock", // optional, defaults to the current mock
                     "scenario": "internal_server_error"
                 }, { 
                     "name": "some-other-mock", 
                     "scenario": "some-scenario"
-                }],
-                "times": 3 // optional
+                }]
             }
         }
     },
